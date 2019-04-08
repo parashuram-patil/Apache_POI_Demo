@@ -1,0 +1,24 @@
+plugins {
+    id 'java'
+	id 'eclipse'
+}
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+     compile group: 'org.apache.poi', name: 'poi-ooxml', version: '3.17'
+	 compile group: 'org.apache.poi', name: 'poi-scratchpad', version: '3.17'
+	 
+	 testImplementation 'junit:junit:4.12'
+}
+
+
+jar {
+    manifest {
+        attributes 'Main-Class': 'com.psp.main.App'
+    }
+    from { configurations.compile.collect { it.isDirectory() ? it : zipTree(it) } }
+}
+
