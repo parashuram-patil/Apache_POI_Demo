@@ -24,3 +24,4 @@ gradlew
 .DS_Store
 *.hprof
 /.project
+gradle.properties
