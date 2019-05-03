@@ -36,7 +36,7 @@ public class AppTest {
 	
 	@Test
 	public void testReadDocxFile() {
-		assertEquals(91,  DocReader.readDocxFile(DOCX_FILE_NAME));
+		assertEquals(90,  DocReader.readDocxFile(DOCX_FILE_NAME));
 	}
 
 }
